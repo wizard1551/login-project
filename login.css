@@ -62,9 +62,10 @@ body {
   box-shadow: 0 0 20px rgba(0,255,200,0.5);
   text-align: center;
   color: #fff;
-  width: 300px;
+  width: 90%;
   animation: fadeIn 1s ease forwards;
   z-index: 2;
+  max-width: 300px;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-30px); }
@@ -198,4 +199,5 @@ footer {
 
 .facebook:hover {
   background-color: #365899;
+
 }
