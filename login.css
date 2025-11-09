@@ -135,7 +135,7 @@ body {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 40px;
   background-color: #111;
   color: #ccc;
   text-align: center;
@@ -164,6 +164,7 @@ footer {
 
 .social-login {
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .social-login p {
@@ -201,3 +202,4 @@ footer {
   background-color: #365899;
 
 }
+
