@@ -171,9 +171,6 @@ canvas.addEventListener("touchstart", (e) => {
     p.vy += (dy / dist) * CLICK_REPEL_FORCE * 0.2;
   });
 });
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-  e.preventDefault(); 
-  console.log("Login clicked!");
-});
+
 
 
