@@ -1,9 +1,16 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background-color: #000;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .wrapper {
   display: flex;
@@ -13,6 +20,10 @@ body {
   height: 100vh;
   position: relative;
   z-index: 1;
+  flex: 1;
+}
+.main {
+  flex: 1;
 }
 
 #particles {
@@ -202,4 +213,5 @@ footer {
   background-color: #365899;
 
 }
+
 
