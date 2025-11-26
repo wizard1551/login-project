@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>تمرینی</title>
-  <link rel="stylesheet" href="login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحه اصلی</title>
+  <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-  <div class="main">
   <canvas id="particles"></canvas>
   <div class="wrapper">
-  <div class="login-container">
-  <h1 class="title">Welcome Back</h1>
-  <form id="loginForm">
-    <div class="input-group">
-      <input type="text" id="username" required>
-      <label for="username">Username</label>
-    </div>
-    <div class="input-group">
-      <input type="password" id="password" required>
-      <label for="password">Password</label>
-    </div>
-    <button type="button" class="btn">Login</button>
-    <p id="message"></p>
-    <div class="extra-links">
-      <a href="#" class="forgot">فراموشی رمز عبور؟</a>
-    </div>
-    <div class="social-login">
-      <p>یا ورود با:</p>
-      <button class="social-btn google" type="button">Google</button>
-      <button class="social-btn facebook" type="button">Facebook</button>
-    </div>
-  </form>
-</div>
-<link rel="stylesheet" href="hh.css">
-  <footer>
-    <p>© 2025 Pooya Rahmati. تمامی حقوق محفوظ است.</p>
-  </footer>
+    <header>
+      <h1 class="title">داشبورد کاربری</h1>
+      <nav>
+        <a href="#">خانه</a>
+        <a href="#">پروفایل</a>
+        <a href="#">تنظیمات</a>
+        <a href="#" id="logoutBtn">خروج</a>
+      </nav>
+    </header>
+
+    <section class="cards">
+      <div class="card">📊 گزارش‌ها</div>
+      <div class="card">💬 پیام‌ها</div>
+      <div class="card">⚙️ تنظیمات</div>
+      <div class="card">👤 پروفایل</div>
+    </section>
+
+    <footer>
+      <p>© 2025 Pooya Rahmati. تمامی حقوق محفوظ است.</p>
+    </footer>
   </div>
-  </div>
-  <script src="script.js"></script>
+  <script src="./main.js"></script>
 </body>
-
 </html>
-
-
