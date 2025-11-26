@@ -1,16 +1,9 @@
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 body {
   margin: 0;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background-color: #000;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 .wrapper {
   display: flex;
@@ -20,10 +13,6 @@ body {
   height: 100vh;
   position: relative;
   z-index: 1;
-  flex: 1;
-}
-.main {
-  flex: 1;
 }
 
 #particles {
@@ -73,10 +62,9 @@ body {
   box-shadow: 0 0 20px rgba(0,255,200,0.5);
   text-align: center;
   color: #fff;
-  width: 90%;
+  width: 300px;
   animation: fadeIn 1s ease forwards;
   z-index: 2;
-  max-width: 300px;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-30px); }
@@ -146,7 +134,7 @@ body {
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: auto;
   background-color: #111;
   color: #ccc;
   text-align: center;
@@ -175,7 +163,6 @@ footer {
 
 .social-login {
   margin-top: 20px;
-  margin-bottom: 30px;
 }
 
 .social-login p {
@@ -211,7 +198,4 @@ footer {
 
 .facebook:hover {
   background-color: #365899;
-
 }
-
-
