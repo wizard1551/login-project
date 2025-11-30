@@ -5,6 +5,11 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
   const message = document.getElementById("signupMessage");
 
   if (username && password) {
+    if (password.length < 4) {
+  message.style.color = "#ff6b6b";
+  message.textContent = "❌ رمز عبور باید حداقل ۴ کاراکتر باشد.";
+  return;
+};
     localStorage.setItem("registeredUser", username);
     localStorage.setItem("registeredPass", password);
     message.style.color = "#00ffc6";

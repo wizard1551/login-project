@@ -5,6 +5,35 @@ body {
   overflow: hidden;
   color: #fff;
 }
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark .card {
+  background: rgba(0,0,0,0.7);
+  color: #00ffc6;
+}
+body.light {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+body.light .card {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#themeToggle {
+  margin-left: 10px;
+  background: #444;
+  color: #fff;
+}
+
+body.light #themeToggle {
+  background: #ddd;
+  color: #000;
+}
 
 #particles {
   position: fixed;
@@ -21,6 +50,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.welcome {
+  margin-top: 40px;
+  text-align: center;
+  color: #00ffc6;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0,255,198,0.7);
+  animation: fadeIn 1.2s ease forwards;
+}
+.btn {
+  background: #00ffc6;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.btn:hover {
+  background: #00bfa5;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 header {

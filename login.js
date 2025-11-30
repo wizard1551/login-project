@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       (username === "pooya" && password === "1385") ||
       (username === savedUser && password === savedPass)
     ) {
+      if (password.length < 4) {
+        message.style.color = "#ff6b6b";
+        message.textContent = "❌ رمز عبور باید حداقل ۴ کاراکتر باشد.";
+        return;
+      };
       message.style.color = "#00ffc6";
       message.textContent = "✅ Login successful!";
       localStorage.setItem("isLoggedIn", "true");
@@ -38,8 +43,8 @@ resizeCanvas();
 let particles = [];
 const PARTICLE_COUNT = 130;
 const LINK_DISTANCE = 120;
-const MOUSE_INFLUENCE = 0.02;   
-const CLICK_REPEL_FORCE = 4;    
+const MOUSE_INFLUENCE = 0.02;
+const CLICK_REPEL_FORCE = 4;
 const mouse = { x: null, y: null, active: false };
 const MAX_SPEED = 2;
 

@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutBtn = document.getElementById("logoutBtn");
+  const themeToggle = document.getElementById("themeToggle");
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  }
+
+  if (themeToggle) {
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(savedTheme);
+
+    themeToggle.textContent = savedTheme === "dark" ? "برو به روشن" : "برو به تاریک";
+
+    themeToggle.addEventListener("click", () => {
+      if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+        localStorage.setItem("theme", "light");
+        themeToggle.textContent = "برو به تاریک";
+      } else {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        themeToggle.textContent = "برو به روشن";
+      }
+    });
+  }
+});
+
+
 document.getElementById("logoutBtn").addEventListener("click", () => {
   localStorage.removeItem("isLoggedIn");
   window.location.href = "index.html";
@@ -12,6 +46,8 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
   alert("شما خارج شدید!");
   window.location.href = "index.html"; 
 });
+const savedUser = localStorage.getItem("registeredUser") || "admin";
+document.getElementById("welcomeUser").textContent = `خوش آمدی، ${savedUser}!`;
 
 
 const canvas = document.getElementById("particles");
